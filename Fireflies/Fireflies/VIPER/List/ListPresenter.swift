@@ -11,13 +11,18 @@ import UIKit
 
 class ListPresenter: ListPresenterInputProtocol {
     weak var view: ListPresenterOutputProtocol?
-    
     var interactor: ListInteractorInputProtocol?
-    
     var router: ListRouterProtocol?
     
+    //data
     var mediaList:Array<Media> = Array()
-
+    
+    //delegates
+    
+    
+    //closures
+    var myclosure: (()->Void)?
+    
     func startFetchingMediaItems() {
         interactor?.fetchNotice()
     }
@@ -26,6 +31,10 @@ class ListPresenter: ListPresenterInputProtocol {
         
     }
     
+    //closures
+    func testClosure(closure:@escaping ()->Void) {
+        myclosure = closure
+    }
 
     
     
@@ -37,6 +46,7 @@ extension ListPresenter: ListInteractorOutputProtocol {
         DispatchQueue.main.async {
             self.view?.showItems(noticeArray: noticeModelArray)
         }
+        myclosure?()
     }
     
     func mediaFetchFailed() {

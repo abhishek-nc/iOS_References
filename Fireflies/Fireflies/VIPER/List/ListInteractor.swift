@@ -12,7 +12,10 @@ class ListInteractor : ListInteractorInputProtocol {
     weak var presenter: ListInteractorOutputProtocol?
     
     func fetchNotice() {
-        let request = URLRequest(url: URL(string: "https://api.npoint.io/33aff47446e89f78f93c")!)
+        var request = URLRequest(url: URL(string: "https://api.npoint.io/33aff47446e89f78f93c")!)
+        //request.httpMethod = "POST"
+        //request.setValue("application/json", forHTTPHeaderField: "Accept")
+        //let urlComp = URLComponents(string: "https://api.npoint.io/33aff47446e89f78f93c")
         NetworkEngine.sharedInstance.execute(request: request) { (result: NetworkResponse<MediaList>) in
             switch  result {
             case let .success(items): self.presenter?.mediaFetchedSuccess(noticeModelArray: items?.result ?? [])

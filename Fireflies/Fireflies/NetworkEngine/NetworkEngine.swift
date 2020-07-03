@@ -7,6 +7,28 @@
 //
 
 import Foundation
+
+protocol ErrorrRule : Error{
+    var message: String {get }
+    var code: Int {get }
+}
+
+enum NWError : ErrorrRule {
+    var message: String {
+        switch self {
+        default: return "somethingWentWrong"
+        }
+    }
+    var code: Int {
+        switch self {
+         default: return 0
+        }
+    }
+    
+    case somethingWentWrong
+    
+}
+
 typealias NetworkResponse<R> = Result<R?,Error>
 typealias NetworkResponseCompletion<R> = (NetworkResponse<R>)->()
 
@@ -30,7 +52,7 @@ class NetworkEngine  {
                 let result = try JSONDecoder().decode(R.self, from: data! )
                 onResponse(Result.success(result))
             } catch {
-                onResponse(Result.success(nil))
+                onResponse(Result.failure(NWError.somethingWentWrong))
             }
         })
         task.resume()

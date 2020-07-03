@@ -7,38 +7,7 @@
 //
 
 import UIKit
-class userClass{
-    var userName: String = "classname"
-}
 
-struct userStruct {
-    var userName: String = "strcutname"
-}
-
-
-class TestClass {
-    
-//        var humanTrialClass : userClass
-//        var humanTrialStruct : userStruct
-        
-    //    var humanTrialClass : userClass?
-    //    var humanTrialStruct : userStruct?
-    
-    init() {
-//        humanTrialClass = nil
-//        humanTrialStruct = nil
-    }
-}
-
-struct TestStruct {
-    
-        var humanTrialClass : userClass
-        var humanTrialStruct : userStruct
-        
-    //    var humanTrialClass : userClass?
-    //    var humanTrialStruct : userStruct?
-    
-}
 
 class ListViewController: UIViewController {
     
@@ -46,27 +15,31 @@ class ListViewController: UIViewController {
     
     var presentor:ListPresenterInputProtocol?
     
+    
+    //closures
     var myname :String = "1"
     var testClassInstance = userClass()
     var testStructInstance = userStruct()
-    
+    //closures
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        var localname = "l1"
-        print(CFGetRetainCount(testClassInstance))
+        presentor?.startFetchingMediaItems()
 
+
+        print("============closures============")
+        var localname = "l1"
         presentor?.testClosure { [localname,myname,weak testClassInstance] in
-//            guard let strongSelf  = self else {
-//                return
-//            }
+            /*
+            guard let strongSelf  = self else {
+                return
+            } */
             print(myname)
             print(localname)
             
-//            myname = "L3"
-//            print(self.myname)
+            //myname = "L3"
+            print(self.myname)
             print(testClassInstance?.userName)
             print(self.testStructInstance.userName)
             print(CFGetRetainCount(testClassInstance))
@@ -75,27 +48,8 @@ class ListViewController: UIViewController {
         myname = "2"
         testClassInstance.userName = "modified class name"
         testStructInstance.userName = "modified struct name"
-        
-        ///
-        presentor?.startFetchingMediaItems()
-        // Do any additional setup after loading the view.
-        
-        print("=====================")
-        
-        let node = TreeNode()
+        print("============closures============")
 
-        node.val = 3
-
-        node.left  = TreeNode(9)
-
-        node.right  = TreeNode(20, TreeNode(15), TreeNode(7))
-
-        let sol = Solution()
-
-        
-
-        let solll = sol.traverseDownLR(node)
-        print(solll)
     }
 
 }
@@ -111,7 +65,6 @@ extension ListViewController: ListPresenterOutputProtocol {
     func showError() {
         
     }
-    
     
 }
 
@@ -135,28 +88,3 @@ extension ListViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
 }
-
-//struct UserS {
-//    var friend: UserS?
-//}
-//struct UserS1 {
-//    var friends: [UserS1] //indirect
-//}
-//
-//class UserC {
-//    var friend: UserC?
-//
-//    init() {
-//        friend = nil
-//    }
-//}
-//class UserC1 {
-//    var friends: [UserC1]?
-//
-//    init() {
-//        friends = nil
-//    }
-//}
-
-
-
