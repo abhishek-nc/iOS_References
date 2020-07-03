@@ -17,8 +17,11 @@
 		446BA3B924ABA043004C155F /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3B824ABA043004C155F /* NetworkEngine.swift */; };
 		446BA3BB24ABC025004C155F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3BA24ABC025004C155F /* ListTableViewCell.swift */; };
 		446BA3BC24ABC553004C155F /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3B124AB97B6004C155F /* ListPresenter.swift */; };
+		446BA3FE24AF0B96004C155F /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3FD24AF0B96004C155F /* Tree.swift */; };
+		446BA40024AF0BC0004C155F /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3FF24AF0BC0004C155F /* Closures.swift */; };
+		446BA40224AF0C86004C155F /* ClassAndStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA40124AF0C86004C155F /* ClassAndStruct.swift */; };
+		446BA40424AF112F004C155F /* FRPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA40324AF112F004C155F /* FRPViewController.swift */; };
 		448A31DE24A47176004717E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A31DD24A47176004717E0 /* AppDelegate.swift */; };
-		448A31E024A47176004717E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A31DF24A47176004717E0 /* SceneDelegate.swift */; };
 		448A31E224A47176004717E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A31E124A47176004717E0 /* ViewController.swift */; };
 		448A31E524A47176004717E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448A31E324A47176004717E0 /* Main.storyboard */; };
 		448A31E824A47176004717E0 /* Fireflies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 448A31E624A47176004717E0 /* Fireflies.xcdatamodeld */; };
@@ -55,9 +58,12 @@
 		446BA3B524AB98D3004C155F /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		446BA3B824ABA043004C155F /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
 		446BA3BA24ABC025004C155F /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		446BA3FD24AF0B96004C155F /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		446BA3FF24AF0BC0004C155F /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		446BA40124AF0C86004C155F /* ClassAndStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStruct.swift; sourceTree = "<group>"; };
+		446BA40324AF112F004C155F /* FRPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPViewController.swift; sourceTree = "<group>"; };
 		448A31DA24A47176004717E0 /* Fireflies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireflies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		448A31DD24A47176004717E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		448A31DF24A47176004717E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		448A31E124A47176004717E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		448A31E424A47176004717E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		448A31E724A47176004717E0 /* Fireflies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fireflies.xcdatamodel; sourceTree = "<group>"; };
@@ -109,13 +115,12 @@
 		446BA3AB24AB9742004C155F /* List */ = {
 			isa = PBXGroup;
 			children = (
-				446BA3A724AB92FB004C155F /* ListViewController.swift */,
+				446BA3FC24AF094D004C155F /* View */,
 				446BA3A924AB9696004C155F /* ListViewProtocols.swift */,
-				446BA3AF24AB977E004C155F /* Entity.swift */,
-				446BA3B124AB97B6004C155F /* ListPresenter.swift */,
 				446BA3B324AB9869004C155F /* ListInteractor.swift */,
+				446BA3B124AB97B6004C155F /* ListPresenter.swift */,
+				446BA3AF24AB977E004C155F /* Entity.swift */,
 				446BA3B524AB98D3004C155F /* ListRouter.swift */,
-				446BA3BA24ABC025004C155F /* ListTableViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -134,6 +139,15 @@
 				446BA3B824ABA043004C155F /* NetworkEngine.swift */,
 			);
 			path = NetworkEngine;
+			sourceTree = "<group>";
+		};
+		446BA3FC24AF094D004C155F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				446BA3A724AB92FB004C155F /* ListViewController.swift */,
+				446BA3BA24ABC025004C155F /* ListTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		448A31D124A47176004717E0 = {
@@ -162,8 +176,11 @@
 				446BA3A624AB92D1004C155F /* VIPER */,
 				446BA3B724ABA026004C155F /* NetworkEngine */,
 				448A31DD24A47176004717E0 /* AppDelegate.swift */,
-				448A31DF24A47176004717E0 /* SceneDelegate.swift */,
 				448A31E124A47176004717E0 /* ViewController.swift */,
+				446BA40324AF112F004C155F /* FRPViewController.swift */,
+				446BA3FD24AF0B96004C155F /* Tree.swift */,
+				446BA3FF24AF0BC0004C155F /* Closures.swift */,
+				446BA40124AF0C86004C155F /* ClassAndStruct.swift */,
 				448A31E324A47176004717E0 /* Main.storyboard */,
 				448A31E924A47177004717E0 /* Assets.xcassets */,
 				448A31EB24A47177004717E0 /* LaunchScreen.storyboard */,
@@ -323,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				446BA3B424AB9869004C155F /* ListInteractor.swift in Sources */,
+				446BA40024AF0BC0004C155F /* Closures.swift in Sources */,
 				446BA3A824AB92FB004C155F /* ListViewController.swift in Sources */,
 				446BA3B924ABA043004C155F /* NetworkEngine.swift in Sources */,
 				446BA3B224AB97B6004C155F /* ListPresenter.swift in Sources */,
@@ -330,10 +348,12 @@
 				446BA3B624AB98D3004C155F /* ListRouter.swift in Sources */,
 				446BA3AA24AB9696004C155F /* ListViewProtocols.swift in Sources */,
 				448A31DE24A47176004717E0 /* AppDelegate.swift in Sources */,
+				446BA40424AF112F004C155F /* FRPViewController.swift in Sources */,
+				446BA40224AF0C86004C155F /* ClassAndStruct.swift in Sources */,
 				446BA3B024AB977E004C155F /* Entity.swift in Sources */,
-				448A31E024A47176004717E0 /* SceneDelegate.swift in Sources */,
 				448A31E824A47176004717E0 /* Fireflies.xcdatamodeld in Sources */,
 				446BA3BB24ABC025004C155F /* ListTableViewCell.swift in Sources */,
+				446BA3FE24AF0B96004C155F /* Tree.swift in Sources */,
 				446BA3AE24AB975F004C155F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
