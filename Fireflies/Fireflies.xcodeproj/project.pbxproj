@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35EF77D524AF59D00063FBE0 /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF77D424AF59D00063FBE0 /* ListInteractorTest.swift */; };
+		35EF77D724AF59E80063FBE0 /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF77D624AF59E80063FBE0 /* ListPresenterTest.swift */; };
+		35EF77D824AF5A3C0063FBE0 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3AF24AB977E004C155F /* Entity.swift */; };
+		35EF77D924AF5A3E0063FBE0 /* ListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3A924AB9696004C155F /* ListViewProtocols.swift */; };
+		35EF77DA24AF5A420063FBE0 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3B324AB9869004C155F /* ListInteractor.swift */; };
+		35EF77DB24AF5A490063FBE0 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3B524AB98D3004C155F /* ListRouter.swift */; };
+		35EF77DC24AF5A560063FBE0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3A724AB92FB004C155F /* ListViewController.swift */; };
+		35EF77DD24AF5A6A0063FBE0 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3B824ABA043004C155F /* NetworkEngine.swift */; };
+		35EF77DE24AF5A780063FBE0 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3FF24AF0BC0004C155F /* Closures.swift */; };
+		35EF77DF24AF5A870063FBE0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3BA24ABC025004C155F /* ListTableViewCell.swift */; };
 		446BA3A824AB92FB004C155F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3A724AB92FB004C155F /* ListViewController.swift */; };
 		446BA3AA24AB9696004C155F /* ListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3A924AB9696004C155F /* ListViewProtocols.swift */; };
 		446BA3AE24AB975F004C155F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA3AD24AB975F004C155F /* DetailViewController.swift */; };
@@ -49,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35EF77D424AF59D00063FBE0 /* ListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTest.swift; sourceTree = "<group>"; };
+		35EF77D624AF59E80063FBE0 /* ListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTest.swift; sourceTree = "<group>"; };
 		446BA3A724AB92FB004C155F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		446BA3A924AB9696004C155F /* ListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocols.swift; sourceTree = "<group>"; };
 		446BA3AD24AB975F004C155F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +207,8 @@
 			children = (
 				448A31F724A47177004717E0 /* FirefliesTests.swift */,
 				448A31F924A47177004717E0 /* Info.plist */,
+				35EF77D424AF59D00063FBE0 /* ListInteractorTest.swift */,
+				35EF77D624AF59E80063FBE0 /* ListPresenterTest.swift */,
 			);
 			path = FirefliesTests;
 			sourceTree = "<group>";
@@ -362,8 +376,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EF77DB24AF5A490063FBE0 /* ListRouter.swift in Sources */,
 				446BA3BC24ABC553004C155F /* ListPresenter.swift in Sources */,
+				35EF77D824AF5A3C0063FBE0 /* Entity.swift in Sources */,
+				35EF77D924AF5A3E0063FBE0 /* ListViewProtocols.swift in Sources */,
+				35EF77DA24AF5A420063FBE0 /* ListInteractor.swift in Sources */,
+				35EF77DF24AF5A870063FBE0 /* ListTableViewCell.swift in Sources */,
+				35EF77DC24AF5A560063FBE0 /* ListViewController.swift in Sources */,
+				35EF77DD24AF5A6A0063FBE0 /* NetworkEngine.swift in Sources */,
 				448A31F824A47177004717E0 /* FirefliesTests.swift in Sources */,
+				35EF77D724AF59E80063FBE0 /* ListPresenterTest.swift in Sources */,
+				35EF77D524AF59D00063FBE0 /* ListInteractorTest.swift in Sources */,
+				35EF77DE24AF5A780063FBE0 /* Closures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
